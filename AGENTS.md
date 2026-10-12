@@ -1,23 +1,23 @@
-# Reglas de desarrollo compartidas
+# Shared Development Rules
 
-Este repositorio contiene exclusivamente las convenciones de desarrollo compartidas
-que los repositorios de la empresa seleccionan para generar su `CODING.md`.
-La CLI que instala y actualiza esas reglas vive en un repositorio independiente.
+This repository contains only the shared development conventions that company
+repositories select to generate their `CODING.md`.
+The CLI that installs and updates these rules lives in a separate repository.
 
-## Alcance
+## Scope
 
-- Mantener reglas modulares en `rules/`, agrupadas por lenguaje o herramienta.
-- Contemplar perfiles independientes como `typescript`, `vue` y `python`.
-- Permitir componer solo los perfiles declarados por cada consumidor, en su orden,
-  sin incorporar perfiles ni reglas de otros lenguajes de forma implícita.
-- Escribir reglas claras, concretas y reutilizables, sin contexto particular de un
-  proyecto. Ese contexto y sus excepciones pertenecen al `AGENTS.md` del consumidor.
+- Maintain modular rules in `rules/`, grouped by language or tool.
+- Support independent profiles such as `typescript`, `vue`, and `python`.
+- Compose only the profiles declared by each consumer, in their declared order,
+  without implicitly including profiles or rules for other languages.
+- Write clear, concrete, reusable rules without project-specific context.
+  That context and its exceptions belong in the consumer's `AGENTS.md`.
 
-## Versionado y cambios
+## Versioning and Changes
 
-- Publicar versiones identificables mediante tags SemVer, como `v1.0.0`.
-- No mover ni reutilizar tags publicados: una misma versión debe producir las mismas reglas.
-- Mantener independiente la versión de las reglas respecto a la versión de la CLI.
-- No implementar aquí la CLI, automatizaciones de propagación ni archivos generados
-  para repositorios consumidores.
-- No crear commits, tags, releases, pushes ni PRs sin una solicitud explícita.
+- Publish identifiable versions using SemVer tags, such as `v1.0.0`.
+- Do not move or reuse published tags: the same version must produce the same rules.
+- Keep the rules version independent of the CLI version.
+- Do not implement the CLI, automated propagation, or generated files for consumer
+  repositories here.
+- Do not create commits, tags, releases, pushes, or PRs without an explicit request.

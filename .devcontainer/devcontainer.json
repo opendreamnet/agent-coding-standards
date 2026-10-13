@@ -1,0 +1,32 @@
+{
+  "name": "agent-coding-standards",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+
+  "updateContentCommand": "sudo bash .devcontainer/boot.sh",
+
+  "mounts": [
+    "source=user_config_data,target=/home/vscode/.config,type=volume",
+    "source=user_local_data,target=/home/vscode/.local,type=volume"
+  ],
+
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/opendreamnet/devcontainer-features/git-cliff:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Company defaults
+        "EditorConfig.EditorConfig",
+        "sleistner.vscode-fileutils",
+        "christian-kohler.path-intellisense",
+        "soerenuhrbach.vscode-deepl",
+        "kilocode.kilo-code",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  }
+}

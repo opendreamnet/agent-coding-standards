@@ -25,6 +25,8 @@
         "christian-kohler.path-intellisense",
         "soerenuhrbach.vscode-deepl",
         "kilocode.kilo-code",
+
+        // Repo
         "tamasfe.even-better-toml"
       ]
     }

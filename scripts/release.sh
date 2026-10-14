@@ -39,6 +39,9 @@ version=$(git-cliff --no-exec --bumped-version | tr -d '\r\n') \
 
 [[ -n "$version" ]] || die "git-cliff returned an empty version."
 
+# Ensure the version has exactly one leading "v".
+version="v${version#v}"
+
 git check-ref-format "refs/tags/$version" >/dev/null \
   || die "The calculated version is not a valid tag name: $version"
 

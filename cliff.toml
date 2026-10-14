@@ -9,13 +9,13 @@ header_marker = "<!-- git-cliff: end of header -->"
 # See https://keats.github.io/tera/#getting-started
 body = """
 {% if version %}\
-    ## [{{ version | trim_start_matches(pat="v") }}] - {{ timestamp | date(format="%Y-%m-%d") }}
+    ## [{{ version }}] - {{ timestamp | date(format="%Y-%m-%d") }}
 {% else %}\
     ## [unreleased]
 {% endif %}\
 {% for entry in commits | commit_groups(groups=commit_parsers_groups) %}
     ### {{ entry.group | striptags | trim | upper_first }}
-    {% for commit in entry.commits %}
+    {% for commit in entry.commits %}   
         - {% if commit.scope %}*({{ commit.scope }})* {% endif %}\
             {% if commit.breaking %}[**breaking**] {% endif %}\
             {{ commit.message | upper_first }}\
